@@ -13,9 +13,17 @@ Adds **Lock channel** / **Unlock channel** to the right-click menu (sidebar row,
 
 Under the hood it uses Slack's own `channels.prefs.get` / `channels.prefs.set` (`who_can_post`, `can_thread`) thunks, and Slack's `additionalOptionsToShow` selector to decide whether you can manage the channel.
 
+### Search From User
+
+Adds **Search messages** to a member's profile **⋯** menu (next to **View files**) and to the right-click menu on their name or avatar in chat. It opens search with a **From** filter for that member, the same filter Slack's own search builds, and runs it right away.
+
+### Undo Mark Read
+
+In the Unreads view, press **Ctrl+Z** (**Cmd+Z** on Mac) to undo the last channel you marked read, the same as clicking its **Undo** button. Pressing it again keeps going back through the channels you marked, newest first, and the undone channel becomes the selected one. It's ignored while you're typing in a text box.
+
 ## Install
 
-Download [`dist/ChannelLock.js`](dist/ChannelLock.js) and install it from `Preferences` > `Taut`.
+Download a plugin from [`dist/`](dist) ([`ChannelLock.js`](dist/ChannelLock.js), [`SearchFromUser.js`](dist/SearchFromUser.js), [`UndoMarkRead.js`](dist/UndoMarkRead.js)) and install it from `Preferences` > `Taut`.
 
 ## Building
 
