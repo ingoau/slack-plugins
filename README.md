@@ -32,17 +32,25 @@ In the Unreads view, press **Ctrl+Z** (**Cmd+Z** on Mac) to undo the last channe
 
 ### Install
 
-Each plugin is in [`slick/dist/`](slick/dist) as a `.js` file (desktop app and browser extension) and a `.user.js` file (userscript):
+Each plugin is in [`slick/dist/`](slick/dist) as a `.js` file (desktop app and browser extension) and a `.user.js` file (userscript).
 
-| Plugin           | Desktop / extension                                       | Userscript                                                          |
-| ---------------- | --------------------------------------------------------- | ------------------------------------------------------------------- |
-| Channel Lock     | [`ChannelLock.js`](slick/dist/ChannelLock.js)             | [`ChannelLock.user.js`](slick/dist/ChannelLock.user.js)             |
-| Search From User | [`SearchFromUser.js`](slick/dist/SearchFromUser.js)       | [`SearchFromUser.user.js`](slick/dist/SearchFromUser.user.js)       |
-| Undo Mark Read   | [`UndoMarkRead.js`](slick/dist/UndoMarkRead.js)           | [`UndoMarkRead.user.js`](slick/dist/UndoMarkRead.user.js)           |
+**Desktop:** in **Slick Settings > Plugins**, paste one of these links and press **Install from URL**. Slick re-downloads it every few hours and updates it in place.
 
-- **Desktop:** in **Slick Settings > Plugins**, paste the plugin's GitHub link (for example `https://github.com/ingoau/slack-plugins/blob/main/slick/dist/ChannelLock.js`) and press **Install from URL**. Slick re-downloads it every few hours and updates it in place. You can also download the file and use **Install plugin...**.
-- **Browser extension:** download the `.js` file and use **Install plugin file…** in the Plugins tab of the Slick toolbar button. Chromium also needs **Allow User Scripts** turned on in the extension's details page. The Firefox Add-ons version can't run user plugins; use the self-hosted xpi instead.
-- **Userscript:** install the `.user.js` file in Violentmonkey next to Slick.
+```
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/slick/dist/ChannelLock.js
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/slick/dist/SearchFromUser.js
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/slick/dist/UndoMarkRead.js
+```
+
+**Browser extension:** download the `.js` file from a link above and use **Install plugin file…** in the Plugins tab of the Slick toolbar button. Chromium also needs **Allow User Scripts** turned on in the extension's details page. The Firefox Add-ons version can't run user plugins; use the self-hosted xpi instead.
+
+**Userscript:** with Violentmonkey installed next to Slick, open one of these links and Violentmonkey offers to install it:
+
+```
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/slick/dist/ChannelLock.user.js
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/slick/dist/SearchFromUser.user.js
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/slick/dist/UndoMarkRead.user.js
+```
 
 Then enable the plugin in Slick's plugin settings.
 
@@ -61,7 +69,13 @@ This writes `ChannelLock.js` and `ChannelLock.user.js`. Slick's plugin docs are 
 
 ### Install
 
-Download a plugin from [`taut/dist/`](taut/dist) ([`ChannelLock.js`](taut/dist/ChannelLock.js), [`SearchFromUser.js`](taut/dist/SearchFromUser.js), [`UndoMarkRead.js`](taut/dist/UndoMarkRead.js)) and install it from `Preferences` > `Taut`.
+Download a plugin from one of these links, then install the file from `Preferences` > `Taut`:
+
+```
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/taut/dist/ChannelLock.js
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/taut/dist/SearchFromUser.js
+https://raw.githubusercontent.com/ingoau/slack-plugins/main/taut/dist/UndoMarkRead.js
+```
 
 ### Build
 
@@ -71,3 +85,7 @@ Plugin sources are in `taut/plugins/`. Build one with a Taut checkout:
 git clone https://github.com/jeremy46231/taut && cd taut && npm ci
 npm run build:user-plugin -- /path/to/slack-plugins/taut/plugins/ChannelLock.tsx /path/to/slack-plugins/taut/dist/ChannelLock.js
 ```
+
+## License
+
+[WTFPL](LICENSE).
